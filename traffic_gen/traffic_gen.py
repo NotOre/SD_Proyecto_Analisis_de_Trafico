@@ -36,7 +36,7 @@ class traffic_generator:
     def generar_trafico(self):
         eventos_consultados = []
 
-        while len(eventos_consultados) < 800:
+        while len(eventos_consultados) < 2000:
             total_eventos = self.client.llen('eventos')
             if total_eventos == 0:
                 print("¿No hay eventos?...")
