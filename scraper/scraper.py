@@ -3,7 +3,7 @@ import json
 import random
 import time
 
-def scrape_events(max_eventos=1000):
+def scrape_events(max_eventos=10000):
 
     # Coordenadas
     top = -32.9222
