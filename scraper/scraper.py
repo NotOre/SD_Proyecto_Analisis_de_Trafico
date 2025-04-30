@@ -25,7 +25,7 @@ def scrape_events(max_eventos=10000):
         if response.status_code == 200:
             data = response.json()
             events_alertas = data.get('alerts', [])
-            events_trafico = data.get('traffic', [])
+            events_trafico = data.get('jams', [])
 
             # Juntar eventos de tráfico y alertas
             todos_los_eventos = [(event, 'trafico') for event in events_trafico] + [(event, 'alerta') for event in events_alertas]
