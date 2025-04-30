@@ -21,7 +21,7 @@ class Cache:
         else:
             raise Exception("No se pudo conectar a Redis después de varios intentos.")
             
-        self.max_cache_size = 100
+        self.max_cache_size = 2000
         self.cache_list_key = 'cache_keys'
         self.politica_remocion = 'LRU'  # Cambiar a 'FIFO' si se desea
 
