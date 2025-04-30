@@ -36,4 +36,3 @@ class EventStorage:
 
     def clear_storage(self):
         self.client.delete(self.list_name)
-
