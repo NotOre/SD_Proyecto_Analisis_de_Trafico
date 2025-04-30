@@ -35,8 +35,9 @@ class traffic_generator:
 
     def generar_trafico(self):
         eventos_consultados = []
+        max_eventos = 5000
 
-        while len(eventos_consultados) < 2000:
+        while len(eventos_consultados) < max_eventos:
             total_eventos = self.client.llen('eventos')
             if total_eventos == 0:
                 print("¿No hay eventos?...")
@@ -49,7 +50,7 @@ class traffic_generator:
                 evento = json.loads(evento_json)
                 eventos_consultados.append(evento)
 
-            print(f"Eventos consultados: {len(eventos_consultados)}")
+            print(f"Eventos consultados: {len(eventos_consultados)} / {max_eventos}")
             intervalo = self.random_alternator()
             time.sleep(intervalo)
 
